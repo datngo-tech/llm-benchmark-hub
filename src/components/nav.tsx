@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BarChart3, DollarSign, Cpu, BookOpen, Menu, X } from "lucide-react";
+import { BarChart3, DollarSign, Cpu, BookOpen, Menu, X, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
@@ -10,6 +10,7 @@ const navItems = [
   { href: "/", label: "Overview", icon: BarChart3 },
   { href: "/finance", label: "Finance", icon: DollarSign },
   { href: "/tech", label: "Tech", icon: Cpu },
+  { href: "/trends", label: "Trends", icon: TrendingUp },
   { href: "/methodology", label: "Methodology", icon: BookOpen },
 ];
 

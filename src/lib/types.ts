@@ -49,3 +49,26 @@ export type ModelComparison = {
   gsm8k: number;
   finqa: number;
 };
+
+export type BenchmarkKey =
+  | "humaneval"
+  | "gpqa"
+  | "sweBench"
+  | "livecodebench"
+  | "mmlu"
+  | "gsm8k"
+  | "finqa";
+
+export type ModelDataPoint = {
+  model: string;
+  releaseDate: string; // "YYYY-MM"
+  label: string;       // "Mar '23"
+  scores: Record<BenchmarkKey, number>;
+};
+
+export type CompanyTimeline = {
+  company: string;
+  key: string;
+  color: string;
+  models: ModelDataPoint[];
+};

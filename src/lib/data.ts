@@ -1,4 +1,4 @@
-import type { Benchmark, ModelComparison } from "./types";
+import type { Benchmark, ModelComparison, CompanyTimeline } from "./types";
 
 export const benchmarks: Benchmark[] = [
   {
@@ -708,5 +708,175 @@ export const modelComparison: ModelComparison[] = [
     mmlu: 90,
     gsm8k: 99,
     finqa: 78,
+  },
+];
+
+export const companyTimelines: CompanyTimeline[] = [
+  {
+    company: "OpenAI",
+    key: "openai",
+    color: "#10b981",
+    models: [
+      {
+        model: "GPT-4",
+        releaseDate: "2023-03",
+        label: "Mar '23",
+        scores: { humaneval: 67.0, gpqa: 35, sweBench: 2, livecodebench: 45, mmlu: 86.4, gsm8k: 92, finqa: 58 },
+      },
+      {
+        model: "GPT-4 Turbo",
+        releaseDate: "2023-11",
+        label: "Nov '23",
+        scores: { humaneval: 80, gpqa: 45, sweBench: 5, livecodebench: 55, mmlu: 87, gsm8k: 95, finqa: 61 },
+      },
+      {
+        model: "GPT-4o",
+        releaseDate: "2024-05",
+        label: "May '24",
+        scores: { humaneval: 90.2, gpqa: 53, sweBench: 37, livecodebench: 74, mmlu: 88, gsm8k: 99.1, finqa: 63 },
+      },
+      {
+        model: "o1-preview",
+        releaseDate: "2024-09",
+        label: "Sep '24",
+        scores: { humaneval: 96.3, gpqa: 78, sweBench: 40, livecodebench: 82, mmlu: 90, gsm8k: 98, finqa: 65 },
+      },
+      {
+        model: "GPT-5.2",
+        releaseDate: "2026-01",
+        label: "Jan '26",
+        scores: { humaneval: 97, gpqa: 92.4, sweBench: 75.4, livecodebench: 90, mmlu: 90, gsm8k: 99, finqa: 78 },
+      },
+    ],
+  },
+  {
+    company: "Anthropic",
+    key: "anthropic",
+    color: "#f59e0b",
+    models: [
+      {
+        model: "Claude 2",
+        releaseDate: "2023-07",
+        label: "Jul '23",
+        scores: { humaneval: 71, gpqa: 28, sweBench: 1, livecodebench: 40, mmlu: 78, gsm8k: 88, finqa: 45 },
+      },
+      {
+        model: "Claude 3 Opus",
+        releaseDate: "2024-03",
+        label: "Mar '24",
+        scores: { humaneval: 84.9, gpqa: 50, sweBench: 5, livecodebench: 60, mmlu: 88.7, gsm8k: 95, finqa: 60 },
+      },
+      {
+        model: "Claude 3.5 Sonnet",
+        releaseDate: "2024-06",
+        label: "Jun '24",
+        scores: { humaneval: 81.7, gpqa: 59.4, sweBench: 49, livecodebench: 80, mmlu: 88.7, gsm8k: 96.4, finqa: 65 },
+      },
+      {
+        model: "Claude Opus 4.5",
+        releaseDate: "2025-07",
+        label: "Jul '25",
+        scores: { humaneval: 93, gpqa: 87, sweBench: 65, livecodebench: 83, mmlu: 90, gsm8k: 98, finqa: 70 },
+      },
+      {
+        model: "Claude Opus 4.6",
+        releaseDate: "2025-10",
+        label: "Oct '25",
+        scores: { humaneval: 96, gpqa: 91.3, sweBench: 79.2, livecodebench: 87, mmlu: 90, gsm8k: 98, finqa: 70 },
+      },
+    ],
+  },
+  {
+    company: "Google",
+    key: "google",
+    color: "#3b82f6",
+    models: [
+      {
+        model: "Gemini 1.0 Pro",
+        releaseDate: "2023-12",
+        label: "Dec '23",
+        scores: { humaneval: 67, gpqa: 30, sweBench: 2, livecodebench: 40, mmlu: 79, gsm8k: 86, finqa: 50 },
+      },
+      {
+        model: "Gemini 1.5 Pro",
+        releaseDate: "2024-02",
+        label: "Feb '24",
+        scores: { humaneval: 87, gpqa: 72, sweBench: 30, livecodebench: 76, mmlu: 89.2, gsm8k: 97, finqa: 60 },
+      },
+      {
+        model: "Gemini 3 Flash",
+        releaseDate: "2025-11",
+        label: "Nov '25",
+        scores: { humaneval: 90, gpqa: 82, sweBench: 76.2, livecodebench: 90.8, mmlu: 89, gsm8k: 98, finqa: 68 },
+      },
+      {
+        model: "Gemini 3 Pro",
+        releaseDate: "2025-12",
+        label: "Dec '25",
+        scores: { humaneval: 95, gpqa: 91.9, sweBench: 77.4, livecodebench: 91.7, mmlu: 90, gsm8k: 99, finqa: 75 },
+      },
+      {
+        model: "Gemini 3.1 Pro",
+        releaseDate: "2026-01",
+        label: "Jan '26",
+        scores: { humaneval: 96, gpqa: 94.3, sweBench: 80, livecodebench: 92, mmlu: 91, gsm8k: 99, finqa: 76 },
+      },
+    ],
+  },
+  {
+    company: "Meta",
+    key: "meta",
+    color: "#a855f7",
+    models: [
+      {
+        model: "Llama 2",
+        releaseDate: "2023-07",
+        label: "Jul '23",
+        scores: { humaneval: 29, gpqa: 21, sweBench: 1, livecodebench: 20, mmlu: 69, gsm8k: 56, finqa: 30 },
+      },
+      {
+        model: "Llama 3.1 405B",
+        releaseDate: "2024-07",
+        label: "Jul '24",
+        scores: { humaneval: 89, gpqa: 51, sweBench: 18, livecodebench: 65, mmlu: 88.6, gsm8k: 96.8, finqa: 55 },
+      },
+      {
+        model: "Llama 4 Scout",
+        releaseDate: "2025-04",
+        label: "Apr '25",
+        scores: { humaneval: 85, gpqa: 60, sweBench: 25, livecodebench: 72, mmlu: 88, gsm8k: 97, finqa: 58 },
+      },
+      {
+        model: "Llama 4 Maverick",
+        releaseDate: "2025-05",
+        label: "May '25",
+        scores: { humaneval: 90, gpqa: 68, sweBench: 30, livecodebench: 78, mmlu: 89, gsm8k: 98, finqa: 62 },
+      },
+    ],
+  },
+  {
+    company: "DeepSeek",
+    key: "deepseek",
+    color: "#ef4444",
+    models: [
+      {
+        model: "DeepSeek Coder-V2",
+        releaseDate: "2024-06",
+        label: "Jun '24",
+        scores: { humaneval: 85, gpqa: 52, sweBench: 15, livecodebench: 76, mmlu: 79, gsm8k: 94, finqa: 50 },
+      },
+      {
+        model: "DeepSeek V3",
+        releaseDate: "2024-12",
+        label: "Dec '24",
+        scores: { humaneval: 85, gpqa: 71, sweBench: 42, livecodebench: 89.6, mmlu: 88, gsm8k: 97, finqa: 58 },
+      },
+      {
+        model: "DeepSeek V3.2 Special",
+        releaseDate: "2025-09",
+        label: "Sep '25",
+        scores: { humaneval: 90, gpqa: 75, sweBench: 50, livecodebench: 89.6, mmlu: 89, gsm8k: 98, finqa: 62 },
+      },
+    ],
   },
 ];
